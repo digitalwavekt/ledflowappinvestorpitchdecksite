@@ -26,11 +26,10 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-navy-900/80 backdrop-blur-xl border-b border-white/5'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        ? 'bg-navy-900/80 backdrop-blur-xl border-b border-white/5'
+        : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto section-padding">
         <div className="flex items-center justify-between h-20">
@@ -57,7 +56,7 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="#contact"
+              href="https://ledflow.digitalwaveitsolution.online/"
               className="px-5 py-2.5 text-sm font-semibold text-navy-900 bg-white rounded-xl hover:bg-slate-100 transition-colors duration-200"
             >
               Get in Touch
@@ -93,7 +92,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="https://ledflow.digitalwaveitsolution.online/"
                 onClick={() => setMobileOpen(false)}
                 className="block mt-3 px-4 py-3 text-center font-semibold text-navy-900 bg-white rounded-xl"
               >
