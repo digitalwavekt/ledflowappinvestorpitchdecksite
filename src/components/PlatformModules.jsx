@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from '../hooks/useInView';
 import {
-  Users, Palette, Shield, Brain,
+  Users, Palette, Shield, Brain, Wallet,
   FileText, Layers, Calendar, Sparkles, Search,
   MessageSquare, Bell, BarChart3, CreditCard, Package,
   UserCheck, Eye, TrendingUp, AlertTriangle, Send,
@@ -131,11 +131,10 @@ export default function PlatformModules() {
             <button
               key={mod.id}
               onClick={() => setActiveTab(mod.id)}
-              className={`flex items-center gap-2.5 px-6 py-3 rounded-xl font-medium text-sm transition-all duration-300 border ${
-                activeTab === mod.id
-                  ? `${colorMap[mod.color]} shadow-lg`
-                  : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10 hover:text-white'
-              }`}
+              className={`flex items-center gap-2.5 px-6 py-3 rounded-xl font-medium text-sm transition-all duration-300 border ${activeTab === mod.id
+                ? `${colorMap[mod.color]} shadow-lg`
+                : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10 hover:text-white'
+                }`}
             >
               <mod.icon className="w-4 h-4" />
               {mod.label}
